@@ -56,7 +56,7 @@
         },
         mounted() {
           
-          console.log(this.$root);
+          //console.log(this.$root);
         }
     }
 </script>
