@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <title>Starting Vue2</title>
+</head>
+
+<style>
+    * {
+        border-radius: 0 !important;
+    }
+
+    body {
+        background-color :aliceblue;
+        font-family: 'Poppins', 'sans-serif';
+    }
+
+    .card {
+        width:300px; 
+        margin:5px;
+    }
+
+    #DeleteBtn {
+        float: right;
+        background-color: darksalmon;
+    }
+</style>
+
+<body>
+
+    <div id="app">
+        <card class="card" v-on:delete-card="deleteCard" v-for="article in articles" :title="article.title" :content="article.content"></card>
+    </div>
+
+    <!-- 뷰, 액시오스를 cdn으로 연동한다. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- 뷰 인스턴스 별도 생성 -->
+    <script src="app.js"></script>
+
+</body>
+</html>

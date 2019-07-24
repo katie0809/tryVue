@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <header>Try Vue</header>
+    </head>
+    <body>
+        <div id="app">
+            {{message}}
+            <child v-on:event2="event3"></child>
+        </div>
+
+        <script src="https:cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+        <script>
+            
+            Vue.component('child',{
+                template:'<button v-on:click="event1">I am a child component</button>',
+                methods: {
+                    event1: function(){
+                        this.$emit("event2");
+                    }
+                }
+            });
+
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    message: "I am a parent component"
+                },
+                methods: {
+                    event3: function(){
+                        this.message = "Received event!"
+                    }
+                }
+            });
+
+        </script>
+    </body>
+</html>

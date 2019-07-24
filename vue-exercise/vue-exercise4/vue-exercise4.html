@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <title>Starting Vue</title>
+</head>
+
+<style>
+    * {
+        border-radius: 0 !important;
+    }
+
+    body {
+        background-color :aliceblue;
+        font-family: 'Poppins', 'sans-serif';
+    }
+</style>
+
+<body>
+    <br><br><br>
+    <div id="app">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- 두개의 드롭박스를 만든다 -->
+                <label>From</label>
+                <select name="" id="" class="form-ctrl-from" v-model="from_currency">
+                    <!-- 동적으로 환율 드롭박스 옵션을 로딩한다. -->
+                    <!-- value앞에 :를 붙여주면 currency.id를 javascript expression으로 인식함.
+                    그냥 value를 쓰면 currency.id라는 스트링 값이 데이터로 떨궈지게 되는거! -->
+                    <option :value="currency.id" v-for="currency in formattedCurrencies">{{ currency.currencyName }}</option>
+                </select>
+                <label>To</label>
+                <select name="" id="" class="form-ctrl-from" v-model="to_currency">
+                    <!-- 동적으로 환율 드롭박스 옵션을 로딩한다. -->
+                    <!-- value property에는 옵션을 선택하면 실제로 저장되는 값을 지정한다 -->
+                    <!-- 즉, 보여지는건 환율의 이름이고, 선택하면 환율의 아이디가 값으로 떨궈지는거 -->
+                    <option :value="currency.id" v-for="currency in formattedCurrencies">{{ currency.currencyName }}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <input type="number" :placeholder="from_currency" v-model="amount">
+                <!-- amount가 0이거나 null, 변환중이면 버튼을 disable 한다 -->
+                <button class="btn btn-primary convert" :disabled="isBtnVisible" v-on:click="convertCurrencies">
+                    <!-- 변환중에는 버튼 텍스트도 바꿔준다 -->
+                    {{ loading ? 'Converting..' : 'Convert' }}
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h1 class="resultText">
+                    >> {{ calculatedResult }}
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- 뷰, 액시오스를 cdn으로 연동한다. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- 액시오스 API request를 날릴 뷰 인스턴스 별도 생성 -->
+    <script src="vueInstance.js"></script>
+
+</body>
+</html>

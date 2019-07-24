@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <header>Try Vue</header>
+    </head>
+    <body>
+        <div id="app">
+            <child"></child>
+            <child_local></child_local>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+        <script>
+            
+            Vue.component('child', {
+                template: '<div>global</div>'
+            });
+
+            var app = new Vue({
+                el: '#app',
+                methods: {
+                    reverse3: function(){
+
+                    }
+                }
+
+            });
+
+        </script>
+    </body>
+</html>

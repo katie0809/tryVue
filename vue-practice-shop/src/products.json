@@ -1,0 +1,39 @@
+
+[
+    {
+        "id": "f4193076-91b8-409d-9264-98610a3dd51f",
+        "name": "Fantastic Wooden Computer",
+        "slug": "fantastic-wooden-computer",
+        "price": "439.00",
+        "color": "purple",
+        "image": "http://lorempixel.com/640/480/business?=0",
+        "description": "Ad voluptatem qui molestiae in quas corporis eos quam. Quam quidem doloribus tenetur at quidem. Deleniti ut ut. Cumque neque soluta dolore blanditiis quas odio. Et id a. Rerum cum tempora."
+    },
+    {
+        "id": "d10f105b-b8d5-4e89-b27e-b2d44199e7ee",
+        "name": "Sleek Fresh Pants",
+        "slug": "sleek-fresh-pants",
+        "price": "920.00",
+        "color": "grey",
+        "image": "http://lorempixel.com/640/480/business?=1",
+        "description": "Fugiat vitae consequatur labore tenetur in nobis ut beatae illum. Quod aut doloribus at omnis maiores. Vel enim porro porro id sequi. Voluptatem quo animi ea voluptatem necessitatibus. Quasi tempora aut maiores ut maiores."
+    },
+    {
+        "id": "3c147436-9a54-41e2-b3a7-ed617de270b0",
+        "name": "Fantastic Plastic Mouse",
+        "slug": "fantastic-plastic-mouse",
+        "price": "138.00",
+        "color": "purple",
+        "image": "http://lorempixel.com/640/480/business?=2",
+        "description": "Quod est omnis sit ut architecto nostrum. Cumque excepturi libero voluptas odio illo illo nemo. Consequuntur sequi animi quod saepe."
+    },
+    {
+        "id": "09a95fe7-b53e-4ddf-b01d-782ee23ccf4a",
+        "name": "Ergonomic Frozen Chicken",
+        "slug": "ergonomic-frozen-chicken",
+        "price": "316.00",
+        "color": "olive",
+        "image": "http://lorempixel.com/640/480/business?=3",
+        "description": "Tenetur facilis officia voluptatibus voluptatum eum sed mollitia esse. Error ratione quidem dolore veritatis inventore culpa eos doloribus blanditiis. Sunt qui sit aut eligendi consequatur autem. Iusto amet et perspiciatis laborum molestiae."
+    }
+]
