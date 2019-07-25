@@ -20,7 +20,16 @@
 
 <script>
     export default {
-        name: 'login'
+        name: 'login',
+        beforeRouteEnter(to, from, next) {
+            if(localStorage.getItem('auth'))
+            {
+                return next({ path: '/' });   
+            }
+            else{
+                next();
+            }
+        }
     }
 </script>
 

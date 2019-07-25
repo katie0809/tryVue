@@ -1,6 +1,25 @@
+/* eslint-disable */
 import Vue from 'vue'
 import App from './App.vue'
+
+// 라우팅 기능 위한 모듈. vue-router 설치해야한다
 import router from './router.js'
+
+// 아이콘 사용 위한 모듈. fontawesome 관련된 아래 3개의 모듈 설치해야한다.
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+// 토스트 알림 위한 모듈. vuejs-noty 설치해야한다.
+import VueNoty from 'vuejs-noty'
+
+// 데려온 fontawesome 라이브러리에 가져온 아이콘들을 추가해준다
+// 아이콘들은 prefix로 가져온다. prefix => fas인 애들을 데려온다.
+library.add(fas)
+
+Vue.component('fontawesome-icon', FontAwesomeIcon);
+
+Vue.use(VueNoty);
 
 Vue.config.productionTip = false
 
