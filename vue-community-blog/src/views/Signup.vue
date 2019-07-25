@@ -63,7 +63,8 @@
                 name: '',
                 email: '',
                 password: '',
-                errors: {}
+                errors: {},
+		loading: false
             }
         },
         methods: {
@@ -78,9 +79,10 @@
                     password: this.password
                 }).then(({response}) => {
                     // response에서 데이터는 원래 response.data.data에 들어있다.
-                    // ({})로 감싸줌으로서 Object response를 destructure 할 수 있다.
+                    // {}로 감싸줌으로서 Object response를 destructuring 할 수 있다.
                     this.$root.auth = response;
-                }).catch(response => {
+                    this.loading = false;
+                }).catch(() => {
                     
                     // 해당 api는 더이상 동작하지 않는다.
                     // 강제로 값을 넣어준다.

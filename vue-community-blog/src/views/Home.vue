@@ -10,7 +10,7 @@
 
 <script>
 
-    import news from '@/components/Ariticle.vue';
+    import news from '@/components/Article.vue';
     import Axios from 'axios'
     // config 환경설정 파일을 가져온다.
     import config from '@/config'
